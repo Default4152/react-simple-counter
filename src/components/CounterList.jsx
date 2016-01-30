@@ -6,8 +6,8 @@ var CounterList = React.createClass({
     console.log(this.props.items);
   },
   render: function() {
-    var generatedItems = this.props.items.map(function(item) {
-      return <CounterItem text={item.text} key={item.text + item.counter} counter={item.counter} handleBtnPress={this.handleBtnPress}/>
+    var generatedItems = this.props.items.map(function(item, idx) {
+      return <CounterItem text={item.text} key={item.text + ' ' + idx} counter={item.counter} handleBtnPress={this.handleBtnPress}/>
     }.bind(this));
     return (
       <ul className="list-group">

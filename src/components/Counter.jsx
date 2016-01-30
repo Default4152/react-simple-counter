@@ -18,7 +18,7 @@ var Counter = React.createClass({
         counter: 0
       });
     }
-    
+
     this.setState({
       newItemText: '',
       items: buildItems
